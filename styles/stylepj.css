@@ -1,0 +1,202 @@
+* /* o * faz com que se aplique as config abaixo na pag toda (reseta) */ 
+{
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Limita a margem do conteúdo */
+}
+
+:root /* Paleta de cores e fonte*/
+{
+    --cor-primaria: #86649c;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #b8ffb8;
+    --cor-quartenaria:#80b180;
+
+    --fonte-primaria: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
+
+body /* Todo o conteúdo visual da página */
+{
+    background: linear-gradient(to right, #fbd3e9, #4b1248); /* Define a cor de fundo do corpo da página */
+    font-family: var(--fonte-secundaria); /* Define a fonte padrão do corpo */
+    margin: 0; /* Remove a margem padrão */
+    min-height: 100vh; /* Define a altura mínima como 100% da altura da viewport */
+    display: flex; /* Define o layout como flexbox */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    box-sizing: border-box;
+}
+
+header /* cabeçalho da página */
+{
+    padding: 2% 0% 0% 6%; /* Define um preenchimento no topo e na base */
+}
+
+.menu /* barra de navegação tag - nav */
+{
+    display: flex; /* Define o layout como flexbox */
+    padding: 10px 5%; /* Define um preenchimento interno (10px no topo e na base, 5% nas laterais) */
+    flex-direction: row; /* Organiza os itens do menu em uma linha */
+    cursor: pointer; /* Define o cursor do mouse como ponteiro ao passar sobre o menu */
+    margin-left: 12%; /* Adiciona uma margem à esquerda de 12% */
+    gap: 100px; /* Define um espaço de 100px entre os itens */
+    font-size: 1.5rem; /* Define o tamanho da fonte dos itens do menu */
+}
+
+.menu1 /*links do menu - tag a*/
+{
+    text-decoration: none; /* Remove a decoração padrão dos links */
+    color: var(--cor-secundaria); /* define cor da fonte */
+    font-size: 1.5rem; /* Define o tamanho da fonte */
+    font-family: var(--fonte-secundaria); /* Define a fonte padrão do corpo */
+    font-weight: 600; /* Define a espessura da fonte */
+    font-style: normal; /* Define o estilo da fonte */
+}
+
+.editarmain /* main */
+{
+    margin: 5% 15%; /* Define a margem em cima/embaixo e nas laterais */
+    display: flex; /* Define o layout como flexbox */
+    flex: 1; /* Define a flexibilidade do contêiner */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    justify-content: flex-start; /* Alinha os itens ao início do contêiner */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+}
+
+h1, p, .subtitulo /* Estilos para h1, p e subtítulo */
+{
+    color: var(--cor-secundaria); /* define cor da fonte */
+}
+
+.linha-separadora /* hr */
+{
+    border: 0; /* Remove a borda padrão */
+    height: 1px; /* Define a altura da linha */
+    background: var(--cor-secundaria); /* Cor da linha */
+    margin: 20px 0; /* Espaçamento acima e abaixo da linha */
+}
+
+.textor /* section textor */
+{
+    width: 100%; /* Define a largura como 100% */
+    max-width: 900px; /* Define a largura máxima */
+    display: flex; /* Define o layout como flexbox */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    gap: 30px; /* Define um espaço de 30px entre os itens */
+    padding: 5%;
+}
+
+.inicio /* div inicio */
+{
+    display: flex; /* Define o layout como flexbox */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+}
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 2em; /* Espaçamento vertical entre os itens */
+    align-items: center; /* Centraliza os itens verticalmente */
+}
+.conteudo1, .conteudo2, .conteudo3{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    justify-content: center;
+}
+
+.button, .button1 {
+    position: relative;
+    display: inline-block;
+}
+
+.button a {
+    color: white;
+    font-family: var(--fonte-primaria);
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: #f8b9e5;
+    display: block;
+    position: relative;
+    padding: 20px 40px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000000;
+    box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #d17cb8;
+    border-radius: 1em;
+    transition: background-color 0.3s, transform 0.1s; /* Adicionando transições */
+}
+
+.button a:active {
+    background-color: #fc7ff1;
+    transform: translateY(2px); /* Adicionando efeito de profundidade ao clicar */
+}
+
+.button:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    position: absolute;
+    bottom: -15px;
+    left: -4px;
+    z-index: -1;
+    background-color: #410841c0;
+    border-radius: 1em;
+}
+.button1 a {
+    color: white;
+    font-family: var(--fonte-primaria);
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: #cda3f5;
+    display: block;
+    position: relative;
+    padding: 20px 40px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000;
+    box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #a07fbe;;
+    border-radius: 1em;
+    transition: background-color 0.3s, transform 0.1s; /* Adicionando transições */
+}
+
+.button1 a:active {
+    background-color: #9072ac;
+    transform: translateY(2px); /* Adicionando efeito de profundidade ao clicar */
+}
+
+.button1:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    position: absolute;
+    bottom: -15px;
+    left: -4px;
+    z-index: -1;
+    background-color: #33013394;
+    border-radius: 1em;
+}
+.pz_titulo /* h1 */
+{
+    font-size: 2.125rem; /* Define o tamanho da fonte */
+    font-family: var(--fonte-primaria); /* Define a fonte padrão do corpo */
+    font-weight: 400; /* Define a espessura da fonte */
+    font-style: normal; /* Define o estilo da fonte */
+    color: var(--cor-secundaria); /* define cor da fonte */
+    margin-left: 20px; /* Ajuste o espaçamento entre a foto e o título conforme necessário */
+}
+.rodape /* footer */
+{
+    background-color: #d89fbd; /* Define a cor de fundo do rodapé */
+    padding: 24px; /* Define o preenchimento interno */
+    text-align: center; /* Alinha o texto ao centro */
+    font-size: 1.375rem; /* Define o tamanho da fonte */
+    font-family: var(--fonte-secundaria); /* Define a fonte padrão do corpo */
+    font-weight: 400; /* Define a espessura da fonte */
+    font-style: normal; /* Define o estilo da fonte */
+    color: var(--cor-secundaria); /* define cor da fonte */
+    margin-top: auto; /* Fixa o rodapé na parte inferior da página */
+}
